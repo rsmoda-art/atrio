@@ -1,0 +1,70 @@
+* { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, sans-serif; }
+:root { --pri: #4a3f8c; --bg: #f4f3f9; }
+body { background: var(--bg); color: #222; }
+.hidden { display: none !important; }
+
+.login { min-height: 100vh; display: grid; place-items: center; background: linear-gradient(135deg, var(--pri), #8b7fd1); }
+.card { background: #fff; padding: 2.5rem; border-radius: 16px; width: min(360px, 90vw); display: flex; flex-direction: column; gap: .8rem; box-shadow: 0 10px 40px #0003; }
+.card h1 { text-align: center; color: var(--pri); font-size: 2.4rem; }
+.sub { text-align: center; color: #777; margin-bottom: 1rem; }
+input { padding: .8rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; }
+button { padding: .8rem; border: 0; border-radius: 8px; background: var(--pri); color: #fff; font-size: 1rem; cursor: pointer; }
+button:disabled { opacity: .6; }
+.erro { color: #c0392b; text-align: center; min-height: 1.2rem; }
+
+.app { display: flex; min-height: 100vh; }
+aside { width: 240px; background: var(--pri); color: #fff; display: flex; flex-direction: column; padding: 1rem; transition: .3s; }
+.logo { font-size: 1.8rem; font-weight: 700; padding: 1rem 0 2rem; text-align: center; }
+nav { display: flex; flex-direction: column; gap: .3rem; flex: 1; }
+nav a { color: #fff; text-decoration: none; padding: .8rem 1rem; border-radius: 8px; }
+nav a:hover, nav a.ativo { background: #fff2; }
+nav a.off { opacity: .5; }
+#btn-sair { background: #fff2; }
+main { flex: 1; }
+header { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.5rem; background: #fff; box-shadow: 0 2px 6px #0001; }
+header h2 { flex: 1; color: var(--pri); }
+#btn-menu { display: none; background: none; color: var(--pri); font-size: 1.5rem; padding: 0; }
+#conteudo { padding: 1.5rem; }
+
+@media (max-width: 768px) {
+  aside { position: fixed; left: -240px; top: 0; bottom: 0; z-index: 10; }
+  aside.aberto { left: 0; }
+  #btn-menu { display: block; }
+}
+
+nav .sub { padding-left: 2rem; font-size: .95rem; }
+nav a { cursor: pointer; }
+
+.data-hoje { color: #666; margin-bottom: 1rem; text-transform: capitalize; }
+.grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; }
+.box { background: #fff; border-radius: 12px; padding: 1.2rem; box-shadow: 0 2px 8px #0001; display: flex; flex-direction: column; }
+.box h3 { color: var(--pri); font-size: 1.05rem; margin-bottom: .8rem; display: flex; align-items: center; gap: .4rem; }
+.badge { margin-left: auto; background: var(--pri); color: #fff; border-radius: 99px; padding: 0 .6rem; font-size: .85rem; }
+.box ul { list-style: none; flex: 1; max-height: 260px; overflow: auto; }
+.box li { padding: .5rem 0; border-bottom: 1px solid #eee; }
+.box li small { display: block; color: #777; margin-top: .2rem; }
+.ver { margin-top: .8rem; font-size: .9rem; color: var(--pri); text-decoration: none; align-self: flex-end; }
+.vazio { color: #aaa; font-style: italic; text-align: center; padding: 1rem; flex: 1; }
+.tag { background: #ece9fa; color: var(--pri); font-size: .75rem; padding: .1rem .5rem; border-radius: 6px; }
+
+.barra { display: flex; gap: .6rem; margin-bottom: 1rem; flex-wrap: wrap; }
+.barra input { flex: 1; min-width: 180px; }
+select, textarea { padding: .8rem; border: 1px solid #ddd; border-radius: 8px; font-size: 1rem; width: 100%; font-family: inherit; }
+.barra select { width: auto; }
+.tabela-wrap { background: #fff; border-radius: 12px; overflow: auto; box-shadow: 0 2px 8px #0001; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: .8rem; text-align: left; border-bottom: 1px solid #eee; }
+th { background: #f8f7fc; color: var(--pri); font-size: .9rem; }
+.acoes { white-space: nowrap; text-align: right; }
+.mini { background: none; padding: .3rem .5rem; }
+.mini:hover { background: #eee; }
+
+dialog { border: 0; border-radius: 14px; padding: 1.5rem; width: min(480px, 92vw); margin: auto; }
+dialog::backdrop { background: #0006; }
+dialog h3 { color: var(--pri); margin-bottom: 1rem; }
+dialog label { display: flex; flex-direction: column; gap: .3rem; margin-bottom: .8rem; font-size: .9rem; color: #555; }
+dialog input { width: 100%; }
+.dlg-acoes { display: flex; gap: .6rem; justify-content: flex-end; }
+.sec { background: #eee; color: #333; }
+.load { color: #888; }
+

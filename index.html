@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#4a3f8c">
+  <title>Átrio</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="tela-login" class="login">
+    <form id="form-login" class="card">
+      <h1>Átrio</h1>
+      <p class="sub">Organização digital da igreja</p>
+      <input id="usuario" placeholder="Usuário" required autocomplete="username">
+      <input id="senha" type="password" placeholder="Senha" required autocomplete="current-password">
+      <button type="submit" id="btn-entrar">Entrar</button>
+      <p id="erro" class="erro"></p>
+    </form>
+  </section>
+
+  <section id="tela-app" class="app hidden">
+    <aside id="sidebar">
+      <div class="logo">Átrio</div>
+      <nav id="nav"></nav>
+      <button id="btn-sair">Sair</button>
+    </aside>
+    <main>
+      <header>
+        <button id="btn-menu">☰</button>
+        <h2 id="titulo-pagina">Recepção</h2>
+        <span id="nome-usuario"></span>
+      </header>
+      <div id="conteudo"></div>
+    </main>
+  </section>
+
+  <dialog id="dlg">
+    <form id="dlg-form">
+      <h3 id="dlg-titulo"></h3>
+      <div id="dlg-campos"></div>
+      <div class="dlg-acoes">
+        <button type="button" class="sec" onclick="dlg.close()">Cancelar</button>
+        <button type="submit" id="dlg-salvar">Salvar</button>
+      </div>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>
